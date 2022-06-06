@@ -16,7 +16,7 @@ Redux: v4.2.0
 
 1) git clone https://github.com/starlingProj/pizza.git, or download a ZIP of my repository
 2) open downloaded file in your IDE
-3) run console and write npm install package.json
+3) run console and write  npm install package.json
 4) npm start
 
 Your browser automaticly start on localhost:3000
