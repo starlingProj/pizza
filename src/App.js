@@ -8,12 +8,17 @@ import { Home, Cart } from './pages'
 
 import axios from 'axios'
 
+<<<<<<< HEAD
 import { setPizzas } from "./redux/actions/pizzas";
+=======
+
+>>>>>>> 94fba42 (Basic SPA without image)
 
 import {useDispatch } from "react-redux";
 
 
 function App() {
+<<<<<<< HEAD
   const dispatch = useDispatch();
   React.useEffect(() => {
 
@@ -23,6 +28,9 @@ function App() {
       console.error(err)
     })
   }, []);
+=======
+ 
+>>>>>>> 94fba42 (Basic SPA without image)
 
   return (
     <BrowserRouter>
