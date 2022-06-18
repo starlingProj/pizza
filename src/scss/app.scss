@@ -8,9 +8,6 @@ body {
   background-color: $background;
   padding: 50px 0;
 }
-<<<<<<< HEAD
-
-=======
 .page-block {
   width: 1000px;
   text-align: center;
@@ -60,7 +57,6 @@ body {
     }
   }
 }
->>>>>>> 94fba42 (Basic SPA without image)
 .wrapper {
   width: calc(100vw - 100px);
   height: 100%;
@@ -80,12 +76,8 @@ body {
   &__items {
     display: flex;
     flex-wrap: wrap;
-<<<<<<< HEAD
-    justify-content: space-between;
-=======
     justify-content: flex-start;
     
->>>>>>> 94fba42 (Basic SPA without image)
   }
 
   &__top {
@@ -101,11 +93,7 @@ body {
 
   &--cart {
     max-width: 820px;
-<<<<<<< HEAD
-    margin: 90px auto;
-=======
     margin: 0px auto;
->>>>>>> 94fba42 (Basic SPA without image)
     .content__title {
       margin: 0;
     }
@@ -272,20 +260,12 @@ body {
   }
 
   &__bottom {
-<<<<<<< HEAD
-    margin: 50px 0;
-
-    &-details {
-      display: flex;
-      justify-content: space-between;
-=======
     margin-top: 50px;
     margin-bottom: -20px;
 
     &-details {
       display: flex;
       justify-content: space-around;
->>>>>>> 94fba42 (Basic SPA without image)
 
       span {
         font-size: 22px;
@@ -300,11 +280,7 @@ body {
 
     &-buttons {
       display: flex;
-<<<<<<< HEAD
-      justify-content: space-between;
-=======
       justify-content: space-around;
->>>>>>> 94fba42 (Basic SPA without image)
       margin-top: 40px;
 
       .go-back-btn {

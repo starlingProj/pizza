@@ -1,12 +1,8 @@
 const initialState = {
     items: [],
-<<<<<<< HEAD
-    isLoaded: false
-=======
     activePage:1,
     totalCount:0
     
->>>>>>> 94fba42 (Basic SPA without image)
 }
 const pizzas = (state = initialState, action) => {
     if (action.type === 'SET_PIZZAS') {
@@ -15,8 +11,6 @@ const pizzas = (state = initialState, action) => {
             items: action.payload,
         }
     }
-<<<<<<< HEAD
-=======
     if(action.type==='SET_COUNT'){
         return{
             ...state,
@@ -29,7 +23,6 @@ const pizzas = (state = initialState, action) => {
             activePage:action.payload
         }
     }
->>>>>>> 94fba42 (Basic SPA without image)
     return state;
 }
 export default pizzas;

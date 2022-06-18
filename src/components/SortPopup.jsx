@@ -1,18 +1,9 @@
 import React from 'react'
-<<<<<<< HEAD
-function SortPopup({ items }) {
-
-    const [visiblePopup, setVisiblePopup] = React.useState(false);
-    const [activeItem, setActiveItem] = React.useState(0);
-    const sortRef = React.useRef();
-    const activeLabel = items[activeItem].name;
-=======
 import PropTypes from 'prop-types';
 const SortPopup = React.memo(function SortPopup({activeSortType,onClickSortType, items }) {
     const [visiblePopup, setVisiblePopup] = React.useState(false);
     const sortRef = React.useRef();
     const activeLabel = items.find((obj) =>obj.type===activeSortType).name
->>>>>>> 94fba42 (Basic SPA without image)
     
     const toggleVisiblePopup = () => {
         setVisiblePopup(!visiblePopup);
@@ -26,13 +17,9 @@ const SortPopup = React.memo(function SortPopup({activeSortType,onClickSortType,
         document.body.addEventListener('click', handleOutsideClick);
     },[]);
     const onSelectItem = (index) => {
-<<<<<<< HEAD
-        setActiveItem(index);
-=======
         if (onClickSortType) {
             onClickSortType(index);
           }
->>>>>>> 94fba42 (Basic SPA without image)
         setVisiblePopup(false)
 
     }
@@ -58,18 +45,11 @@ const SortPopup = React.memo(function SortPopup({activeSortType,onClickSortType,
             <ul>
                 {
                     items.map((obj, index) => (
-<<<<<<< HEAD
-                        <li
-                            className={activeItem === index ? 'active' : ''}
-                            key={`${obj.type}_${index}`}
-                            onClick={() => onSelectItem(index)}
-=======
                       
                         <li
                             className={activeSortType === obj.type ? 'active' : ''}
                             key={`${obj.type}_${index}`}
                             onClick={() => onSelectItem(obj)}
->>>>>>> 94fba42 (Basic SPA without image)
                         >{obj.name}</li>
 
                     ))
@@ -78,9 +58,6 @@ const SortPopup = React.memo(function SortPopup({activeSortType,onClickSortType,
             </ul>
         </div>}
     </div>)
-<<<<<<< HEAD
-}
-=======
 })
 SortPopup.propTypes = {
     activeSortType: PropTypes.string.isRequired,
@@ -92,5 +69,4 @@ SortPopup.propTypes = {
     items: [],
   };
   
->>>>>>> 94fba42 (Basic SPA without image)
 export default SortPopup

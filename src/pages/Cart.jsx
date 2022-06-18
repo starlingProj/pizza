@@ -1,10 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
-
-function Cart() {
-  return (
-    <div>Cart</div>
-=======
 import { CartItem } from '../components'
 import{useSelector,useDispatch} from'react-redux';
 import {  clearCart} from "../redux/actions/cart";
@@ -87,7 +81,6 @@ function Cart() {
        
       </div>
     </div>
->>>>>>> 94fba42 (Basic SPA without image)
   )
 }
 

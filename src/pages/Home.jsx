@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { useSelector } from "react-redux";
-import { Categories, SortPopup, PizzaBlock } from '../components/index'
-function Home() {
-
-  const { items } = useSelector(({ pizzas }) => ({
-    items: pizzas.items
-  }))
-  return (
-    <div className="container">
-      <div className="content__top">
-        <Categories items={['Мясні', 'Вегетаріанські', 'Гриль', 'Гострі', 'Закриті']} />
-        <SortPopup
-          items={[{ name: 'популярності', type: 'popular' },
-          { name: 'ціні', type: 'price' },
-          { name: 'алфавіту', type: 'alphabet' }]} />
-=======
 import axios from 'axios';
 import React from 'react'
 import { useSelector, useDispatch } from "react-redux";
@@ -108,17 +90,11 @@ dispatch(addPizzatoCart(obj))
           activeSortType={sortBy.type}
           items={sortItems}
           onClickSortType={onSelectSortType} />
->>>>>>> 94fba42 (Basic SPA without image)
       </div>
       <h2 className="content__title">Всі піци</h2>
       <div className="content__items">
         {
           items && items.map((obj) => (
-<<<<<<< HEAD
-            <PizzaBlock key={obj.id} {...obj} />)
-          )}
-      </div>
-=======
             <PizzaBlock 
             addedCount={cartItems[obj.id]&& cartItems[obj.id].items.length}
             onClickAddPizza ={handleAddPizzaToCart}
@@ -146,7 +122,6 @@ dispatch(addPizzatoCart(obj))
             </ul>
             </div>
         </div>
->>>>>>> 94fba42 (Basic SPA without image)
     </div>
   )
 }
