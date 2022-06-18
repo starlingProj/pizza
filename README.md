@@ -6,13 +6,13 @@ https://nodejs.org/uk/download/
 
 Project develops on:
 
-v16.13.0 Node js
+- v16.13.0 Node js
 
-IDE -> Visual Studio Conde
+- IDE -> Visual Studio Conde
 
-React v18.1.0
+- React v18.1.0
 
-Redux: v4.2.0
+- Redux: v4.2.0
 
 *git clone https://github.com/starlingProj/pizza.git, or download a ZIP of my repository
 
