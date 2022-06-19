@@ -18,6 +18,17 @@ function PIzzaBlock({id, name, image, price, types, sizes,onClickAddPizza,addedC
   const availableSizes = [15, 30, 50];
   const [activeSize, setActiveSize] = React.useState(sizesName[0]);
   const [activeType, setActiveType] = React.useState(typesName[0]);
+  console.log(activeSize)
+  if(activeSize === availableSizes[0]){
+    price = price;
+  }
+  else if( activeSize === availableSizes[1]){
+    price = Number(price)+25;
+  }
+  else if(activeSize === availableSizes[2]){
+    price = Number(price)+40;
+  }
+  console.log("Ціна",price)
   const onAddPizza=()=>{
     const obj={
       id,
@@ -28,6 +39,7 @@ function PIzzaBlock({id, name, image, price, types, sizes,onClickAddPizza,addedC
       type:activeType
 
     }
+
     onClickAddPizza(obj)
   }
   const onSelectType = (obj) => {
@@ -40,18 +52,18 @@ function PIzzaBlock({id, name, image, price, types, sizes,onClickAddPizza,addedC
     return (num ^ 0) === num;
   }
 
-  const slicePrice = (num) => {
+  // const slicePrice = (num) => {
 
-    !isInteger(Number(num)) ? price = price : price = price.slice(0.2);
+  //   !isInteger(Number(num)) ? price = price : price = price.slice(0.2);
 
-    if (!isInteger(Number(num))) {
-      return num;
-    }
-    else {
+  //   if (!isInteger(Number(num))) {
+  //     return num;
+  //   }
+  //   else {
 
-      return Number(num)
-    }
-  }
+  //     return Number(num)
+  //   }
+  // }
   return (
     <div className="pizza-block">
       <img
@@ -95,7 +107,7 @@ function PIzzaBlock({id, name, image, price, types, sizes,onClickAddPizza,addedC
         </ul>
       </div>
       <div className="pizza-block__bottom">
-        <div className="pizza-block__price">від {slicePrice(price)} ₴</div>
+        <div className="pizza-block__price">Ціна: {Number(price)} ₴</div>
         <Button onClick={onAddPizza }
          className='button--add' outline>
           <svg
